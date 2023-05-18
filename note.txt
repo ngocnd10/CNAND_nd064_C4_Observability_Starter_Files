@@ -1,0 +1,11 @@
+kubectl port-forward service/prometheus-grafana --address 0.0.0.0 3000:80 -n monitoring
+username: admin 
+password: prom-operator
+
+kubectl port-forward service/prometheus-operated --address 0.0.0.0 9090:9090 -n monitoring
+
+kubectl port-forward service/simpletest-query --address 0.0.0.0 16686:16686 -n observability 
+
+kubectl port-forward svc/frontend 8080:8080
+
+kubectl port-forward svc/backend 8081:8081
