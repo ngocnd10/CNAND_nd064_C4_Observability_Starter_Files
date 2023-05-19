@@ -89,10 +89,37 @@ Description: The server encountered an internal error and was unable to complete
 
 _TODO:_ We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
 
+- Latency — 95% requests have response time less than 2000 ms per month
+- Errors — 95% request have response without error per month
+- Saturation — CPU and memory usage no exceed 80%
+- Uptime - 99.95% uptime per month
+
 ## Building KPIs for our plan
 
 _TODO_: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
 
+- Latency — Measure time serve request
+  - Average response time
+  - Success response
+- Errors — Measure rate of failure requests
+  - Error 40x
+  - Error 50x
+- Saturation — Monitor resource consumption
+  - CPU used
+  - Memory used
+- Uptime - Indicator app is up and running
+  - Backend uptime
+  - Frontend uptime
+
 ## Final Dashboard
 
 _TODO_: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.
+
+![Alt text](./answer-img/8-final-dashboard.png)
+
+- Application Uptime depicts uptime of application
+- Average Response Time depicts average response time
+- Error Response depicts total tnumber error requests
+- Success Response depicts total tnumber success requests
+- CPU Usage depicts CPU used
+- Memory Usage depicts memory used
