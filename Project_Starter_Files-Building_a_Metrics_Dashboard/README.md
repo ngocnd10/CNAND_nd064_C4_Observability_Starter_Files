@@ -4,13 +4,19 @@
 
 _TODO:_ run `kubectl` command to show the running pods and services for all components. Take a screenshot of the output and include it here to verify the installation
 
+![Alt text](./answer-img/1-verify-installation.png)
+
 ## Setup the Jaeger and Prometheus source
 
 _TODO:_ Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
 
+![Alt text](./answer-img/2-grafana-home.png)
+
 ## Create a Basic Dashboard
 
 _TODO:_ Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
+
+![Alt text](./answer-img/3-prometheus-dashboard.png)
 
 ## Describe SLO/SLI
 
@@ -44,31 +50,40 @@ _TODO:_ It is important to know why we want to measure certain metrics for our c
 
 _TODO:_ Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
 
+![Alt text](./answer-img/4-dashboard-measure.png)
+
 ## Tracing our Flask App
 
 _TODO:_ We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
+
+![Alt text](./answer-img/5-1-flask-tracing.png)
+![Alt text](./answer-img/5-2-flask-tracing.png)
 
 ## Jaeger in Dashboards
 
 _TODO:_ Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
 
+![Alt text](./answer-img/6-jaeger-dashboard.png)
+
 ## Report Error
 
 _TODO:_ Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
 
+![Alt text](./answer-img/7-report-error.png)
+
 TROUBLE TICKET
 
-Name:
+Name: Ngoc Nguyen
 
-Date:
+Date: May 19 2023, 08:34:49
 
-Subject:
+Subject: Backend service with add star endpoint shows "500 Internal Server Error"
 
-Affected Area:
+Affected Area: API add star (POST /star)
 
-Severity:
+Severity: High
 
-Description:
+Description: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. The span is b55bcff6007cee31
 
 ## Creating SLIs and SLOs
 
